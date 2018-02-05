@@ -1,0 +1,534 @@
+<!-- <section class="wrapper">
+            <div
+                class="row"
+               >
+                <div class="col-lg-7 col-md-7 col-sm-12 column sortable block"  >
+                   
+                    <div class="row" >
+                        <div class="col-md-6" *ngFor="let item of stages; let i = index">
+                         
+                            <div class="panel-new-homepage card-back">
+                                <div class="panel-heading">
+
+                                    <span class="tools-new pull-right"  (click)="isCollapsed = !isCollapsed">
+                                        <a
+                                            class="fa fa-chevron-down"
+                                            href="javascript:;"
+                                        
+                                        ></a>
+                                        <a
+                                            class="fa fa-cog"
+                                            href="javascript:;"
+                                        ></a>
+                                        <a
+                                            class="fa fa-times"
+                                            href="javascript:;"
+                                        ></a>
+                                    </span>
+                                </div>
+                                <div class="panel-body" (collapsed)="collapsed($event)"
+                                (expanded)="expanded($event)"
+                                [collapse]="isCollapsed" >
+                                    <div class="clearfix homepage-s1">
+                                        <div class="homepage-center">
+                                            <a  >
+                                                <span class="hb-stage hb-sm">{{item.stagename}}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <a
+                                            (click)="navigate(item)"
+                                                class="m-l-18"
+                                            >
+                                                <span class="hb hb-sm">{{item.completecount}}</span>
+                                            </a>
+                                          
+                                        </div>
+                                        <div
+                                            class="col-sm-4"
+                                            style="padding:0;"
+                                        >
+                                            <a
+                                            (click)="navigate(item)"
+                                                class="m-l-2"
+                                            >
+                                                <span class="hb-red hb-sm">{{item.noresponsecount}}</span>
+                                            </a>
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <a
+                                            (click)="navigate(item)"
+                                                class="m-l-34 m-t--29"
+                                            >
+                                                <span class="hb-purple hb-sm">{{item.pendingcount}}</span>
+                                            </a>
+                                          
+                                        </div>
+                                        <div class="col-sm-5 pull-right">
+                                            <a
+                                            (click)="navigate(item)"
+                                                class="m-l-1 m-t--29"
+                                            >
+                                                <span class="hb-blue hb-sm">{{item.scheduledcount}}</span>
+                                            </a>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    </div>
+                  
+                   
+            <div class="col-lg-5 col-md-5 col-sm-12 column block">
+               
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel-new border-6-top">
+                            <div class="panel-heading-new">
+                                PIPELINE VIEW
+                                <span class="tools-new pull-right">
+                                    <a
+                                        class="fa fa-chevron-down"
+                                        href="javascript:;"
+                                    ></a>
+                                    <a
+                                        class="fa fa-cog"
+                                        href="javascript:;"
+                                    ></a>
+                                    <a
+                                        class="fa fa-times"
+                                        href="javascript:;"
+                                    ></a>
+                                </span>
+                            </div>
+                            <div class="panel-body-homepage row">
+                                <div class="col-sm-2 col-xs-2">
+                                    
+                                    <div class="calendar-btn">
+                                        <button  *ngFor="let item of stages;  let i = index" (select)="selectedIndex == i" class="btn btn-round-calendar calendar-red" (click)="pipeline(item,i)" [autofocus]="item.active">{{item.stagename}}</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-xs-10">
+                                    
+                                        <app-calender-component ></app-calender-component>
+                                     
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel-new-sch border-6-top">
+                            <div class="panel-heading-new">
+                                SCHEDULES
+                                <span class="tools-new pull-right">
+                                  
+                                    <span class="row input-group date dpYears sch-cal">
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            #dp="bsDatepicker"
+                                            bsDatepicker
+                                            style="width:0px;height:0px;border:none;position: relative;
+                                               left: -21px;
+                                               top: -8px;"
+                                        >
+                                        <span
+                                            class="input-group-btn"
+                                            style="position: relative;
+                                               top: -30px;
+                                               left: -30px;"
+                                        >
+                                            <button
+                                                class="btn btn-cal date-set"
+                                                (click)="dp.toggle()"
+                                                type="button"
+                                            >
+                                                <span
+                                                    class="glyphicon glyphicon-calendar"
+                                                    style="font-size: 18px;"
+                                                ></span>
+                                            </button>
+                                        </span>
+
+                                    </span>
+
+                                    <a
+                                        class="fa fa-chevron-down"
+                                        href="javascript:;"
+                                    ></a>
+                                
+                                    <a
+                                        class="fa fa-times"
+                                        href="javascript:;"
+                                    ></a>
+                                </span>
+                            </div>
+                            <div class="panel-body-sch">
+                                <table class="table table-bordered table-striped">
+                                    <tbody class="sch-table">
+                                        <tr>
+                                            <td class="text-center">9:30</td>
+                                            <td class="text-center">S1</td>
+                                            <td>
+                                                <a href="employee-details.html">Suryanarayanan Yegnesswaran</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">11:15</td>
+                                            <td class="text-center">S2</td>
+                                            <td>
+                                                <a href="employee-details.html">Sharath Krishna</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">14:30</td>
+                                            <td class="text-center">S4</td>
+                                            <td>
+                                                <a href="employee-details.html">Venkatesh Subramanian</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">17:15</td>
+                                            <td class="text-center">S3</td>
+                                            <td>
+                                                <a href="employee-details.html">Ajeet Agrawal</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">18:00</td>
+                                            <td class="text-center">S1</td>
+                                            <td>
+                                                <a href="employee-details.html">Hiteshkumar Modi</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">18:45</td>
+                                            <td class="text-center">S4</td>
+                                            <td>
+                                                <a href="employee-details.html">Sravankumar</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+</section> -->
+<section class="wrapper">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-7 home-row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-new-homepage card-back">
+                                <div class="panel-heading">
+                                    <span class="tools-new pull-right">
+                                        <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                        <a class="fa fa-cog" href="javascript:;"></a>
+                                        <a class="fa fa-times" href="javascript:;"></a>
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="clearfix homepage-s1">
+                                        <div class="homepage-center">
+                                            <a href="#"><span class="hb-stage hb-sm-stage">S1</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <a href="Drilldown homepage.html" class="m-l-18"><span class="hb-red hb-sm">03</span></a>
+                                        </div>
+                                        <div class="col-sm-4" style="padding:0;">
+                                            <a href="Drilldown homepage.html" class="m-l-2"><span class="hb-purple hb-sm">05</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <a href="Drilldown homepage.html" class="m-l-34 m-t--29"><span class="hb hb-sm">01</span></a>
+                                        </div>
+                                        <div class="col-sm-5 pull-right">
+                                            <a href="Drilldown homepage.html" class="m-l-1 m-t--29"><span class="hb-blue hb-sm">02</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-new-homepage card-back2">
+                                <div class="panel-heading">
+                                    
+                            <span class="tools-new pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                            </span>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="clearfix homepage-s1">
+                                        <div class="homepage-center">
+                                            <a href="#"><span class="hb-stage1 hb-sm-stage">S2</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <a href="Drilldown homepage.html" class="m-l-18"><span class="hb-red hb-sm">03</span></a>
+                                        </div>
+                                        <div class="col-sm-4" style="padding:0;">
+                                            <a href="Drilldown homepage.html" class="m-l-2"><span class="hb-purple hb-sm">05</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <a href="Drilldown homepage.html" class="m-l-34 m-t--29"><span class="hb hb-sm">01</span></a>
+                                        </div>
+                                        <div class="col-sm-5 pull-right">
+                                            <a href="Drilldown homepage.html" class="m-l-1 m-t--29"><span class="hb-blue hb-sm">02</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <ul class="legend-ul">
+                            <li class="home-li">
+                                <i class="fa fa-circle legend-completed" aria-hidden="true"></i>
+                            </li>
+                            <li class="home-li">
+                                <h6 class="legend-title">Completed</h6>
+                            </li>
+                            <li class="home-li">
+                                <i class="fa fa-circle legend-pending" aria-hidden="true"></i>
+                            </li>
+                            <li class="home-li">
+                                <h6 class="legend-title">Pending</h6>
+                            </li>
+                            <li class="home-li">
+                                <i class="fa fa-circle legend-no-response" aria-hidden="true"></i>
+                            </li>
+                            <li class="home-li">
+                                <h6 class="legend-title">No Response</h6>
+                            </li>
+                            <li class="home-li">
+                                <i class="fa fa-circle legend-scheduled" aria-hidden="true"></i>
+                            </li>
+                            <li class="home-li">
+                                <h6 class="legend-title">Scheduled</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-new-homepage card-back1">
+                                <div class="panel-heading">
+                                    
+                            <span class="tools-new pull-right">
+                                <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                <a class="fa fa-cog" href="javascript:;"></a>
+                                <a class="fa fa-times" href="javascript:;"></a>
+                            </span>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="clearfix homepage-s1">
+                                        <div class="homepage-center">
+                                            <a href="#"><span class="hb-stage2 hb-sm-stage">S3</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <a href="Drilldown homepage.html" class="m-l-18"><span class="hb-red hb-sm">03</span></a>
+                                        </div>
+                                        <div class="col-sm-4" style="padding:0;">
+                                            <a href="Drilldown homepage.html" class="m-l-2"><span class="hb-purple hb-sm">05</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <a href="Drilldown homepage.html" class="m-l-34 m-t--29"><span class="hb hb-sm">01</span></a>
+                                        </div>
+                                        <div class="col-sm-5 pull-right">
+                                            <a href="Drilldown homepage.html" class="m-l-1 m-t--29"><span class="hb-blue hb-sm">02</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-new-homepage card-back3">
+                                <div class="panel-heading">
+                                    <span class="tools-new pull-right">
+                                        <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                        <a class="fa fa-cog" href="javascript:;"></a>
+                                        <a class="fa fa-times" href="javascript:;"></a>
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="clearfix homepage-s1">
+                                        <div class="homepage-center">
+                                            <a href="#"><span class="hb-stage3 hb-sm-stage">S4</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <a href="Drilldown homepage.html" class="m-l-18"><span class="hb-red hb-sm">03</span></a>
+                                        </div>
+                                        <div class="col-sm-4" style="padding:0;">
+                                            <a href="Drilldown homepage.html" class="m-l-2"><span class="hb-purple hb-sm">05</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <a href="Drilldown homepage.html" class="m-l-34 m-t--29"><span class="hb hb-sm">01</span></a>
+                                        </div>
+                                        <div class="col-sm-5 pull-right">
+                                            <a href="Drilldown homepage.html" class="m-l-1 m-t--29"><span class="hb-blue hb-sm">02</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 pipeline-row">
+                <div class="">
+                    <div class="col-md-12">
+                        <div class="panel-new border-6-top pm">
+                            <div class="panel-heading-new">
+                                PIPELINE VIEW
+                                <span class="tools-new pull-right">
+                                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                    <a class="fa fa-cog" href="javascript:;"></a>
+                                    <a class="fa fa-times" href="javascript:;"></a>
+                                </span>
+                            </div>
+                            <div class="panel-body-homepage">
+                                <div class="col-sm-2 col-xs-2">
+                                    <div class="calendar-btn">
+                                        <!-- <button class="btn btn-round-calendar calendar-red"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button> -->
+                                        <button class="btn btn-square-calendar calendar-red">CLEAR</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-round-calendar calendar-red">S1</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-round-calendar calendar-red">S2</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-round-calendar calendar-red">S3</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-round-calendar calendar-red">S4</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-xs-10">
+                                    <div id='calendar'>
+                                        <app-calender-component ></app-calender-component>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="col-md-12">
+                        <div class="panel-new-sch border-6-top">
+                            <div class="panel-heading-new">
+                                SCHEDULES 
+                                <span class="tools-new pull-right">
+                                    <span data-date-format="dd-M-yy" class="input-group date dpYears sch-cal datepicker-new">
+                                        <input type="text" size="16" class="" hidden="hidden" style="display: none;">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-cal date-set" type="button">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </button>
+                                        </span>
+                                    </span>
+                                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                    <a class="fa fa-times" href="javascript:;"></a>
+                                </span>
+                            </div>
+                            <div class="panel-body-sch">
+                                <table class="table table-bordered table-striped">
+                                    <tbody class="sch-table">
+                                      <tr>
+                                        <td class="text-center">9:30</td>
+                                        <td class="text-center">S1</td>
+                                        <td><a href="employee-details.html">Suryanarayanan Yegnesswaran</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">11:15</td>
+                                        <td class="text-center">S2</td>
+                                        <td><a href="employee-details.html">Sharath Krishna</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">14:30</td>
+                                        <td class="text-center">S4</td>
+                                        <td><a href="employee-details.html">Venkatesh Subramanian</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">17:15</td>
+                                        <td class="text-center">S3</td>
+                                        <td><a href="employee-details.html">Ajeet Agrawal</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">18:00</td>
+                                        <td class="text-center">S1</td>
+                                        <td><a href="employee-details.html">Hiteshkumar Modi</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">18:45</td>
+                                        <td class="text-center">S4</td>
+                                        <td><a href="employee-details.html">Sravankumar</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

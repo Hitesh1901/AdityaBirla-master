@@ -1,0 +1,210 @@
+<section class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row-fluid">
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="activity-das">
+                            
+                        </div>
+                        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                                <a routerLink="/home" class="btn-floating btn-lg peach-gradient btn-p-l">
+                                    <i class="fa fa-reply"></i>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="clearfix m-t--10">
+                            <div class="emp-detail-drill-top emp-detail-red">
+                                <ul class="nav pull-right entity-menu">
+                                    <li>
+                                        <label class="entity-label">From</label>
+                                    </li>
+                                    <li class="entity-li-new">
+                                        <div data-date-viewmode="years" data-date-format="dd-M-yy" class="input-append date dpYears datepicker-new">
+                                                <input type="text"
+                                                class="form-control bs"
+                                                #dp="bsDatepicker"
+                                                bsDatepicker>
+                                                <span class="input-group-btn add-on-entity">
+                                                    <button class="btn btn-primary posi" type="button" (click)="dp.toggle()"><i class="fa fa-calendar"></i></button>
+                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="entity-label">To</label>
+                                    </li>
+                                    <li class="entity-li-new">
+                                        <div data-date-viewmode="years" data-date-format="dd-M-yy" class="input-append date dpYears datepicker-new">
+                                                <input type="text"
+                                                class="form-control bs"
+                                                #dp="bsDatepicker"
+                                                bsDatepicker>
+                                                <span class="input-group-btn add-on-entity">
+                                                    <button class="btn btn-primary posi" type="button" (click)="dp.toggle()"><i class="fa fa-calendar"></i></button>
+                                                </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="entity-label">Grade</label>
+                                    </li>
+                                    <li>
+                                        <select class="form-control input-sm-new">
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <button class="btn-drill-new btn-drill"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </li>
+                                    <li>
+                                        <button class="btn-drill-new btn-entity"><img  src="../../assets/downloading-file.png" class="export-img"></button>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper-sec">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row-fluid">
+                        <div class="col-sm-12">
+                            <div class="panel-new border-3-top">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="">
+                                            <ul class="text-center">
+                                                <li class="hr-li-drill">
+                                                    <a href="#"><span class="hb-pink hb-sm-pink active">S1</span></a>
+                                                </li>
+                                                <li class="hr-li-drill">
+                                                    <a href="#"><span class="hb-pink hb-sm-pink">S2</span></a>
+                                                </li>
+                                                <li class="hr-li-drill">
+                                                    <a href="#"><span class="hb-pink hb-sm-pink">S3</span></a>
+                                                </li>
+                                                <li class="hr-li-drill">
+                                                    <a href="#"><span class="hb-pink hb-sm-pink">S4</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row" style="margin: 0;">
+                                            <ul class="text-center">
+                                                <li class="info-box-li">
+                                                    <a href="#">
+                                                        <div class="info-box bg-complete hover-expand-effect">
+                                                            <div class="icon-complete">
+                                                                <img src="../../assets/user-com.png" style="width: 50px;">
+                                                            </div>
+                                                            <div class="content-new">
+                                                                <div class="text">Completed</div>
+                                                                <div class="number count-to">01</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="info-box-li">
+                                                    <a href="#">
+                                                        <div class="info-box bg-pending hover-expand-effect active">
+                                                            <div class="icon-pending">
+                                                                <img src="../../assets/drill-pending.png" style="width: 50px;">
+                                                            </div>
+                                                            <div class="content-new">
+                                                                <div class="text">Pending</div>
+                                                                <div class="number count-to">03</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="info-box-li">
+                                                    <a href="#">
+                                                        <div class="info-box bg-no-res hover-expand-effect">
+                                                            <div class="icon-no-res">
+                                                                <img src="../../assets/drill-no-response.png" style="width: 50px;">
+                                                            </div>
+                                                            <div class="content-new">
+                                                                <div class="text">No Response</div>
+                                                                <div class="number count-to">05</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="info-box-li">
+                                                    <a href="#">
+                                                        <div class="info-box bg-schedule hover-expand-effect">
+                                                            <div class="icon-schedule">
+                                                                <img src="../../assets/drill-sch.png" style="width: 50px;">
+                                                            </div>
+                                                            <div class="content-new">
+                                                                <div class="text">Scheduled</div>
+                                                                <div class="number count-to">02</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="text-center">
+                                            <div class="m-b-10 m-t-20">
+                                                <div class="input-group" style="width:150px;">
+                                                    <div class="spinner-buttons input-group-btn">
+                                                        <button type="button" class="btn spinner-down btn-warning spinner-down-radius">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" class="spinner-input form-control text-center form-control-spinner" maxlength="3" readonly placeholder="Today">
+                                                    <div class="spinner-buttons input-group-btn">
+                                                        <button type="button" class="btn spinner-up btn-primary spinner-up-radius">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m-b-10">
+                                                <div class="input-group" style="width:150px;">
+                                                    <div class="spinner-buttons input-group-btn">
+                                                        <button type="button" class="btn spinner-down btn-warning spinner-down-radius">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" class="spinner-input form-control text-center form-control-spinner" maxlength="3" readonly placeholder="Week">
+                                                    <div class="spinner-buttons input-group-btn">
+                                                        <button type="button" class="btn spinner-up btn-primary spinner-up-radius">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="input-group" style="width:150px;">
+                                                    <div class="spinner-buttons input-group-btn">
+                                                        <button type="button" class="btn spinner-down btn-warning spinner-down-radius">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" class="spinner-input form-control text-center form-control-spinner" maxlength="3" readonly placeholder="Month">
+                                                    <div class="spinner-buttons input-group-btn">
+                                                        <button type="button" class="btn spinner-up btn-primary spinner-up-radius">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<data-table></data-table>

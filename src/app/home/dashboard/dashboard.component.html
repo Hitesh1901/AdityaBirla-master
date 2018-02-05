@@ -1,0 +1,352 @@
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-lg peach-gradient btn-p-l" href="home.html">
+        <i class="fa fa-reply"></i>
+    </a>
+</div>
+<section class="wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row-fluid">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+                    <div class="activity-das">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <div class="clearfix m-t--10">
+                        <div class="emp-detail-entoty-top emp-detail-red">
+                            <ul class="nav pull-right entity-menu">
+                                <li>
+                                    <label class="entity-label">Entity</label>
+                                </li>
+                                <li>
+                                    <select class="form-control input-sm-new">
+                                        <option>ABFL</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="entity-label">From</label>
+                                </li>
+                                <li class="entity-li-new">
+                                    <div data-date-viewmode="years" data-date-format="dd-M-yy" class="input-append date dpYears datepicker-new">
+                                            <input type="text"
+                                            class="form-control bs"
+                                            #dp="bsDatepicker"
+                                            bsDatepicker>
+                                            <span class="input-group-btn add-on-entity">
+                                                <button class="btn btn-primary posi" type="button" (click)="dp.toggle()"><i class="fa fa-calendar"></i></button>
+                                            </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label class="entity-label">To</label>
+                                </li>
+                                <li class="entity-li-new">
+                                    <div data-date-viewmode="years" data-date-format="dd-M-yy" class="input-append date dpYears datepicker-new">
+                                            <input type="text"
+                                            class="form-control bs"
+                                            #dp="bsDatepicker"
+                                            bsDatepicker>
+                                            <span class="input-group-btn add-on-entity">
+                                                <button class="btn btn-primary posi" type="button" (click)="dp.toggle()"><i class="fa fa-calendar"></i></button>
+                                            </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button class="btn-drill-new btn-drill"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </li>
+                                <li>
+                                    <button class="btn-drill-new btn-entity"><img src="../../../assets/downloading-file.png" class="export-img"></button>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+<section class="wrapper-emp-detail">
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="padding-right: 0;">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        30<sup>th</sup> DAY ACTIVITY FEEDBACK
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                            <div class="activity-detail-body">
+                                    
+                                         <div class="card" >
+                                             <app-bar-chart 
+                                             [barChartColors]="barChartColors" 
+                                             [barChartData]="barChartData" 
+                                             [barChartLabels]="barChartLabels"></app-bar-chart>
+                                         </div>
+                                    
+                                 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="padding-left: 0;">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        30<sup>th</sup> DAY CALL ACTIVITY
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                        <div  class="card" >
+                                <app-radar-chart [radarChartColors]="radarChartColors"></app-radar-chart>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wrapper-emp-detail">
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="padding-right: 0;">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        80<sup>th</sup> DAY ACTIVITY FEEDBACK
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                        <div id="80daychart" class="card" >
+                                <app-bar-chart
+                                 [barChartColors]="barChartColors"
+                                 [barChartData]="barChartData" 
+                                 [barChartLabels]="barChartLabels"
+                                 ></app-bar-chart>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12"  style="padding-left: 0;">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        80<sup>th</sup> DAY ACTIVITY FEEDBACK
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                            <div class="card" >
+                                    <app-radar-chart [radarChartColors]="radarChartColors"></app-radar-chart>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapper-emp-detail">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        120<sup>th</sup> DAY ACTIVITY FEEDBACK
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                            <div class="card">
+                                    <app-line-chart [lineChartColors]="lineChartColors"></app-line-chart>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapper-emp-detail">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        180<sup>th</sup> DAY ACTIVITY FEEDBACK
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                            <div class="card" style="width: 100%; height: 426px; background-color: #FFFFFF;" >
+                                    <app-stacked-bar-chart [barChartColors]="barChartColors"></app-stacked-bar-chart>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapper-emp-detail">
+    <div class="row m-b-35">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right: 0;">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        PRODUCTIVITY
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                            <div class="card" >
+                                    <app-line-chart [lineChartColors]="lineChartColors"></app-line-chart>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-left: 0;">
+            <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                <div class="emp-detail-box emp-detail-red">
+                    <div class="activity-detail-heading">
+                        CALL TIME
+                        <span class="tools pull-right">
+                            <a class="fa fa-chevron-up" href="javascript:;"></a>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-subhead">
+                        Feedback Collected From - 1670 Employees
+                        <span class="pull-right">
+                            Last 30 days
+                        </span>  
+                    </div>
+                    <div class="activity-detail-sub">
+                        From <label>15-Oct-17</label> To <label>15-Nov-17</label>
+                        <span class="pull-right">
+                            <button class="btn btn-day day-feed">Day</button>
+                            <button class="btn btn-day day-feed">Week</button>
+                            <button class="btn btn-day day-feed">Month</button>
+                        </span>  
+                    </div>
+                    <div class="activity-detail-body">
+                            <div class="card" >
+                                    <app-line-chart [lineChartColors]="lineChartColors"></app-line-chart>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,194 @@
+<div>
+    <div class="modal-header-edit">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Functional Designation</h5>
+    </div>
+    <div class="modal-body">
+  <form
+  [formGroup]="myForm"
+  novalidate
+  autocomplete="off"
+  class="size"
+  >
+  <div class="form-horizontal">
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Business Unit</label>
+          <div class="col-md-6">
+              <ng-select
+                  [items]="businessunit"
+                  class="ng-select"
+                  [(ngModel)]="functionalDesignation.businesunitid"
+                  bindLabel="name"
+                  bindValue="id"
+                  placeholder="Select Business Unit"
+                  [formControl]="myForm.controls.functionaldesignation_businesunitname"
+                  required
+              >
+              </ng-select>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_businesunitname"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Department</label>
+          <div class="col-md-6">
+              <ng-select
+                  [items]="dept"
+                  class="ng-select"
+                  [(ngModel)]="functionalDesignation.deptid"
+                  bindLabel="name"
+                  bindValue="id"
+                  placeholder="Select Department"
+                  [formControl]="myForm.controls.functionaldesignation_deptname"
+                  required
+  
+              >
+              </ng-select>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_deptname"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Sub Department</label>
+          <div class="col-md-6">
+              <ng-select
+                  [items]="subdept"
+                  class="ng-select"
+                  [(ngModel)]="functionalDesignation.subdeptid"
+                  bindLabel="name"
+                  bindValue="id"
+                  placeholder="Select Sub Department"
+                  [formControl]="myForm.controls.functionaldesignation_subdeptname"
+                  required
+              >
+              </ng-select>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_subdeptname"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Functions</label>
+          <div class="col-md-6">
+              <ng-select
+                  [items]="functions"
+                  class="ng-select"
+                  [(ngModel)]="functionalDesignation.functionid"
+                  bindLabel="name"
+                  bindValue="id"
+                  placeholder="Select Function"
+                  [formControl]="myForm.controls.functionaldesignation_functionname"
+                  required
+              >
+              </ng-select>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_functionname"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Sub Functions</label>
+          <div class="col-md-6">
+              <ng-select
+                  [items]="subfunctions"
+                  class="ng-select"
+                  [(ngModel)]="functionalDesignation.subfunctionid"
+                  bindLabel="name"
+                  bindValue="id"
+                  placeholder="Select SubFunction"
+                  [formControl]="myForm.controls.functionaldesignation_subfunctionname"
+                  required
+              >
+              </ng-select>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_subfunctionname"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Costcode</label>
+          <div class="col-md-6">
+              <ng-select
+                  [items]="costcode"
+                  class="ng-select"
+                  [(ngModel)]="functionalDesignation.costcenterid"
+                  bindLabel="code"
+                  bindValue="id"
+                  placeholder="Select CostCode"
+                  [formControl]="myForm.controls.functionaldesignation_subdeptname"
+                  required
+              >
+              </ng-select>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_subdeptname"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Department Name</label>
+          <div class="col-md-6">
+              <input
+                  type="text"
+                  class="form-control"
+                  id
+                  placeholder="Department Name"
+                  [(ngModel)]="functionalDesignation.functionaldesignation"
+                  [formControl]="myForm.controls.functionaldesignation_functionaldesignation"
+                  required
+              >
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_functionaldesignation"></form-messages>
+              </small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-md-4 schedule-colr">Description</label>
+          <div class="col-md-6">
+              <textarea
+                  type="text"
+                  class="form-control"
+                  id
+                  placeholder="Description"
+                  [(ngModel)]="functionalDesignation.description"
+                  [formControl]="myForm.controls.functionaldesignation_description"
+                  required
+              ></textarea>
+              <small>
+                  <form-messages [control]="myForm.controls.functionaldesignation_description"></form-messages>
+              </small>
+          </div>
+      </div>
+  
+  </div>
+  
+  <div class="modal-footer clearfix">
+      <button
+          type="button"
+          class="btn schedule-footer btn-info"
+          (click)="save()"
+          [disabled]="!myForm.valid"
+          [ngClass]="{disabled : !myForm.valid}"
+      >
+          <i
+              class="fa fa-floppy-o"
+              aria-hidden="true"
+          ></i>
+          Save
+      </button>
+      <button
+          type="button"
+          class="btn schedule-footer btn-danger"
+          data-dismiss="modal"
+          (click)="onClose()"
+      >
+          <i
+              class="fa fa-times"
+              aria-hidden="true"
+          ></i>
+          Close
+      </button>
+  </div>
+  </form>
+  </div>
+  </div>

@@ -1,0 +1,978 @@
+<section class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row-fluid">
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <ul class="emp-ul">
+                            <li class="emp-li">
+                                <div class="emp-first">
+                                  {{data.employeename}}
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-gender">
+                                    M
+                                </div>
+                            </li>
+                            <li class="emp-li pull-right">
+                                <img src="../../../assets/pdf-file-format.png" class="pdf-format">
+                            </li>
+                        </ul>
+                        <ul class="emp-comp">
+                            <li class="emp-li">
+                                <div class="emp-comp">
+                                    <img src="../../../assets/company.png">
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-comp">
+                                    <h4>birla sunlife insurance</h4>
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-comp">
+                                    <h5>Active</h5>
+                                </div>
+                            </li>
+                            <li class="emp-li hidden-sm hidden-xs">
+                                <div class="input-group emp-call">
+                                    <span class="input-group-addon btn-call"><i class="fa fa-phone" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Call"></i></span>
+                                    <input type="text" class="form-control black" placeholder="{{data.phonenum}}" readonly="" data-toggle="tooltip" data-placement="bottom" title="Call">
+                                </div>   
+                            </li>
+                        </ul>
+                        <ul class="emp-comp">
+                            <li class="emp-li hidden-lg hidden-md hidden-xs">
+                                <div class="input-group emp-call">
+                                    <span class="input-group-addon btn-call"><i class="fa fa-phone" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Call"></i></span>
+                                    <input type="text" class="form-control black" placeholder="{{data.phonenum}}" readonly="" data-toggle="tooltip" data-placement="bottom" title="Call">
+                                </div>   
+                            </li>
+                            <li class="emp-li hidden-lg hidden-md hidden-xs">
+                                <div class="input-group-mail emp-mail">
+                                    <button class="input-group-addon-mail btn-call" data-toggle="modal" data-target="#send_a_mail">
+                                        <i class="fa fa-envelope" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Send Email"></i>
+                                    </button>
+                                    <input type="text" class="form-control black" placeholder="{{data.emailid}}" readonly="" data-toggle="tooltip" data-placement="bottom" title="Send Email">
+                                </div>   
+                            </li>
+                        </ul>
+                        <ul class="emp-designation">
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <img src="../../../assets/designation.png">
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <h4>Senior Chief Manager</h4>
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <img src="../../../assets/location.png">
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <h4>Mumbai</h4>
+                                </div>
+                            </li>
+                            <li class="emp-li pull-right hidden-sm hidden-xs m-r-103">
+                                <div class="input-group-mail emp-mail">
+                                    <span class="input-group-addon-mail btn-call" data-toggle="modal" data-target="#send_a_mail"><i class="fa fa-envelope" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Send Email"></i></span>
+                                    <input type="text" class="form-control black" placeholder="{{data.emailid}}" readonly="" data-toggle="tooltip" data-placement="bottom" title="Send Email">
+                                </div>   
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="emp-third pull-right">
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <button class="btn btn-initiate" data-toggle="modal" data-target="#Initiate_Modal">Feedback</button>
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <button class="btn btn-connect" data-toggle="modal" data-target="#connect_Modal">Connect Later</button>
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-designation">
+                                    <button class="btn btn-Response" data-toggle="modal" data-target="#feedback_Modal">No Response</button>
+                                </div>
+                            </li>
+                            <li class="emp-li">
+                                <div class="emp-designation" data-toggle="modal" data-target="#Schedule_Modal">
+                                    <button class="btn btn-schedule">Schedule</button>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="emp-img">
+                            <img src="../../../assets/male-user.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div class="clearfix"></div>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                employee details
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Employee Code
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                {{data.empcode}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Date of Birth
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                {{data.dob}}
+                                                <span class="emp-detail-dob">
+                                                    {{data.age}}
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Department
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                Retail Sales
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Work Location
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                One India Bulls Center
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Region
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                West
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Level / Job Band
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                9
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Date of Joining
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                               {{data.doj}}
+                                                <span class="emp-detail-dob">
+                                                    {{data.joineddays}}
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                                Sub Department
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                Direct
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               State
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                Maharashtra
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Alternate Number
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right em-alter">
+                                                9856258562
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                REPORTING MANAGER DETAILS
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               Reporting Manager
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                Rakesh Singh
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               RM. Email ID
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                rakeshsingh@adityabirlacapital.com
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               RM. Phone Number
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                9856856895
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               RM. ECode
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                856256
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               HR SPOC
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                Deepa Thakkar
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               HR SPOC Email ID
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                deepa.thakkar@adityabirlacapital.com
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               L2 Manager
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                Deepa Thakkar
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               L2 Manager Email ID
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                deepa.thakkar@adityabirlacapital.com
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               L2 Manager Phone Number
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                8562512385
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               L2 Manager ECode
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                585895
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               HR SPOC Phone Number
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                8562512385
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                           <label class="em-detail-left">
+                                               HR SPOC ECode
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-6 m-l--15">
+                                            <label class="em-detail-right">
+                                                585895
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                ACCELERATE TIMELINES
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <ul id='timeline'>
+                                  <li class='work'>
+                                    <input class='radio-time' id='work5' name='works' type='radio' checked>
+                                    <div class="relative">
+                                      <label for='work5' class="timeline-header">Completed on: 01-May-2016</label>
+                                      <span class='date-timeline'>S1</span>
+                                      <span class='circle'></span>
+                                    </div>
+                                    <div class='content'>
+                                        <p>Case Owner: Sharath Krishna</p>
+                                       <div class="row">
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-amber">3.6</button>
+                                              <span class="timeline-feedback">Feedback</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-red">2</button>
+                                              <span class="timeline-feedback">Accelerate</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-green">4.5</button>
+                                              <span class="timeline-feedback">HR-BP</span> 
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class='work'>
+                                    <input class='radio-time' id='work4' name='works' type='radio'>
+                                    <div class="relative">
+                                      <label for='work4' class="timeline-header">Completed on: 20-Jun-2016</label>
+                                      <span class='date-timeline'>S2</span>
+                                      <span class='circle'></span>
+                                    </div>
+                                    <div class='content'>
+                                        <p>Case Owner: Sharath Krishna</p>
+                                       <div class="row">
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-amber">3.6</button>
+                                              <span class="timeline-feedback">Feedback</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-red">2</button>
+                                              <span class="timeline-feedback">Accelerate</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-green">4.5</button>
+                                              <span class="timeline-feedback">HR-BP</span> 
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class='work'>
+                                    <input class='radio-time' id='work3' name='works' type='radio'>
+                                    <div class="relative">
+                                      <label for='work3' class="timeline-header">Due on: 30-Jul-2016</label>
+                                      <span class='date-timeline'>S3</span>
+                                      <span class='circle'></span>
+                                    </div>
+                                    <div class='content'>
+                                        <p>Case Owner: Sharath Krishna</p>
+                                       <div class="row">
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-amber">3.6</button>
+                                              <span class="timeline-feedback">Feedback</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-red">2</button>
+                                              <span class="timeline-feedback">Accelerate</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-green">4.5</button>
+                                              <span class="timeline-feedback">HR-BP</span> 
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class='work'>
+                                    <input class='radio-time' id='work2' name='works' type='radio'>
+                                    <div class="relative">
+                                      <label for='work2' class="timeline-header">Due on: 28-Sep-2016</label>
+                                      <span class='date-timeline'>S4</span>
+                                      <span class='circle'></span>
+                                    </div>
+                                    <div class='content'>
+                                        <p>Case Owner: Sharath Krishna</p>
+                                       <div class="row">
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-amber">3.6</button>
+                                              <span class="timeline-feedback">Feedback</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-red">2</button>
+                                              <span class="timeline-feedback">Accelerate</span> 
+                                          </div>
+                                          <div class="col-sm-3 text-center timeline-column">
+                                              <button class="btn btn-round-feed feedback-green">4.5</button>
+                                              <span class="timeline-feedback">HR-BP</span> 
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                DOCUMENTS
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="row upload-row">
+                                        <div class="col-sm-10">
+                                           <label class="em-detail-left">
+                                               <a href="../../../assets/pdf.pdf" target="_blank"><span><img src="../../../assets/doc-file.png"> &nbsp;<span class="save-file">Credit Information Bureau India Limited Report</span></span></a>
+                                           </label> 
+                                        </div>
+                                    </div>
+                                    <div class="row upload-row">
+                                        <div class="col-sm-10">
+                                           <label class="em-detail-left">
+                                               <a href="../../../assets/pdf.pdf"  target="_blank"><span data-toggle="tooltip" data-placement="bottom" title=""><img src="../../../assets/doc-file.png"> &nbsp;<span class="save-file">Predictive Index Report</span></span></a>
+                                           </label> 
+                                        </div>
+                                    </div>
+                                    <div class="row download-row">
+                                        <div class="col-sm-10">
+                                           <label class="em-detail-left">
+                                               <span data-toggle="tooltip" data-placement="bottom" title=""><img src="../../../assets/doc-file.png"> &nbsp;<span class="upload-file">Background Verification Report</span></span>
+                                           </label> 
+                                        </div>
+                                        <div class="col-sm-1 m-l--15">
+                                            <label class="em-detail-right">
+                                                <input type="file" name="fileupload" value="fileupload" id="fileupload" style="display: none;">
+                                                <img for="fileupload" src="../../../assets/upload-arrow.png">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="row upload-row">
+                                        <div class="col-sm-10">
+                                           <label class="em-detail-left">
+                                               <a href="../../../assets/pdf.pdf" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title=""><img src="../../../assets/doc-file.png"> &nbsp;<span class="save-file">Interview Assessment Sheet</span></span></a>
+                                           </label> 
+                                        </div>
+                                    </div>
+                                    <div class="row upload-row">
+                                        <div class="col-sm-10">
+                                           <label class="em-detail-left">
+                                               <a href="../../../assets/pdf.pdf" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title=""><img src="../../../assets/doc-file.png"> &nbsp;<span class="save-file">Competency Based Interview</span></span></a>
+                                           </label> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                WORKFLOW HISTORY
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="row">
+                                       <table class="table table-bordered table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th rowspan="2" class="work-thread">Stage</th>
+                                                <th rowspan="2" class="work-thread">Status</th>
+                                                <th rowspan="2" class="work-thread">Due on</th>
+                                                <th rowspan="2" class="work-thread">Completed on</th>
+                                                <th rowspan="2" class="work-thread">Case Owner</th>
+                                                <th colspan="3" class="work-thread">Score</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="work-thread">Feedback</th>
+                                                <th class="work-thread">Accelerate</th>
+                                                <th class="work-thread">HR-BP</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank"> S1</a></td>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">Completed</a></td>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">01-May-2016</a></td>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">03-May-2016</a></td>
+                                                <td class="completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">Sharath Krishna</a></td>
+                                                <td class="feedback-col">
+                                                    <button class="btn btn-round-feed feedback-amber">3.6</button>
+                                                </td>
+                                                <td class="feedback-col">
+                                                    <button class="btn btn-round-feed feedback-amber">3</button>
+                                                </td>
+                                                <td class="feedback-col">
+                                                    <button class="btn btn-round-feed feedback-amber">3.8</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">S2</a></td>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">Completed</a></td>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">20-Jun-2016</a></td>
+                                                <td class="text-center completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">22-Jun-2016</a></td>
+                                                <td class="completed-row"><a href="completed-emp-feedback.html" class="completed-row" target="_blank">yadala venkata guru</a></td>
+                                                <td class="feedback-col">
+                                                    <button class="btn btn-round-feed feedback-green">4.2</button>
+                                                </td>
+                                                <td class="feedback-col">
+                                                    <button class="btn btn-round-feed feedback-green">4.4</button>
+                                                </td>
+                                                <td class="feedback-col">
+                                                    <button class="btn btn-round-feed feedback-green">4</button>
+                                                </td>
+                                            </tr>   
+                                            <tr>
+                                                <td class="text-center pending-row">S3</td>
+                                                <td class="text-center pending-row">Pending</td>
+                                                <td class="text-center pending-row">30-Jun-2016</td>
+                                                <td class="text-center pending-row"></td>
+                                                <td class="pending-row"></td>
+                                                <td class="feedback-col">
+                                                    
+                                                </td>
+                                                <td class="accelerate-na">
+                                                    NA
+                                                </td>
+                                                <td class="feedback-col">
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center coming-row">S4</td>
+                                                <td class="text-center coming-row"></td>
+                                                <td class="text-center coming-row">28-Sep-2016</td>
+                                                <td class="text-center coming-row"></td>
+                                                <td class="coming-row"></td>
+                                                <td class="feedback-col">
+                                                    
+                                                </td>
+                                                <td class="accelerate-na">
+                                                    NA
+                                                </td>
+                                                <td class="feedback-col">
+                                                    
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                Status HISTORY
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="row">
+                                       <table class="table table-bordered table-striped table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th class="work-thread">Stage</th>
+                                                <th class="work-thread">Status</th>
+                                                <!-- <th class="work-thread">Auto Trigger</th> -->
+                                                <th class="work-thread">Timelines</th>
+                                                <th class="work-thread">Initiated by</th>
+                                                <th class="work-thread remarks-th">Remarks</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="status-table">
+                                            <tr>
+                                                <td class="text-center">S1</td>
+                                                <td class="text-center"><label class="re-shedule-label">Re Scheduled</label></td>
+                                                <!-- <td class="text-center">Email, SMS</td> -->
+                                                <td class="text-center">03-May-2016 14:30:20</td>
+                                                <td class="">Sharath Krishna</td>
+                                                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">S1</td>
+                                                <td class="text-center"><label class="reshedule-label">Scheduled</label></td>
+                                                <!-- <td class="text-center">Email, SMS</td> -->
+                                                <td class="text-center">03-May-2016 14:30:20</td>
+                                                <td class="">Sharath Krishna</td>
+                                                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">S1</td>
+                                                <td class="text-center"><label class="conn-later-label">Connect Later</label></td>
+                                                <!-- <td class="text-center">Email, SMS</td> -->
+                                                <td class="text-center">03-May-2016 14:30:20</td>
+                                                <td class="">Sharath Krishna</td>
+                                                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">S1</td>
+                                                <td class="text-center"><label class="no-res-label">No Response</label></td>
+                                                <!-- <td class="text-center">Email, SMS</td> -->
+                                                <td class="text-center">03-May-2016 14:30:20</td>
+                                                <td class="">Sharath Krishna</td>
+                                                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                Notes
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-10">
+                                           <div class="form-group">
+                                                <label for="exampleInputEmail1" class="em-detail-left">New Note :</label>
+                                                <textarea type="email" class="form-control" id="exampleInputEmail1" placeholder="" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 m-l--15">
+                                            <button class="btn btn-schedule m-t-50">Add Note</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="emp-notes">
+                                                <label class="em-detail-left">
+                                                   Business Process Re-Engineering With Its Three Tenets People Capability, Process Maturity And Technology Adoption Form The Core Of Our Ability To Provide Our Customers With An Enterprise-Class Customized Solution To Address Their Talent Acquisition Challenges. S.
+                                               </label> 
+                                               <span>
+                                                   <img src="../../../assets/notes-user.png" class="notes-user-img">&nbsp;&nbsp;<label class="notes-user-label">Sharath Krishna</label>
+                                               </span>
+                                               <span class="pull-right">
+                                                   <img src="../../../assets/note-calendar.png" class="notes-user-img">&nbsp;&nbsp;<label class="notes-user-calendar">05-Jan-2016 14:13:50</label>
+                                               </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="emp-notes">
+                                                <label class="em-detail-left">
+                                                   Orks Was Conceived By A Team Of Practitioners Who Had Already Scripted Successful Corporate Careers And Were From Three Different Areas Of Expertise Technology Consulting, Marketing And Talent Acquisition. Their Combined Vision To Build An Organization 
+                                               </label> 
+                                               <span>
+                                                   <img src="../../../assets/notes-user.png" class="notes-user-img">&nbsp;&nbsp;<label class="notes-user-label">Yadala venkata guru</label>
+                                               </span>
+                                               <span class="pull-right">
+                                                   <img src="../../../assets/note-calendar.png" class="notes-user-img">&nbsp;&nbsp;<label class="notes-user-calendar">15-Feb-2016 12:20:39</label>
+                                               </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="emp-notes">
+                                                <label class="em-detail-left">
+                                                   ScaleneWorks Sees Itself As The First True End-To-End Talent Acquisition Solutions Organization With The Passion To Bring Together Decades Of Experience In Technology Consulting And Talent Acquisition Areas To Usher In A Fundamental Shift In The Way Talent Acquisition Is Practiced In Today’s Ultra-Demanding Business Environs.
+                                               </label> 
+                                               <span>
+                                                   <img src="../../../assets/notes-user.png" class="notes-user-img">&nbsp;&nbsp;<label class="notes-user-label">Suryanarayanan Yegnesswaran</label>
+                                               </span>
+                                               <span class="pull-right">
+                                                   <img src="../../../assets/note-calendar.png" class="notes-user-img">&nbsp;&nbsp;<label class="notes-user-calendar">30-Apr-2016 10:15:37</label>
+                                               </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pull-right">
+                                        <nav aria-label="Page navigation example">
+                                          <ul class="pagination justify-content-end">
+                                            <li class="page-item disabled">
+                                              <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">Next</a>
+                                            </li>
+                                          </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper-emp-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                        <div class="emp-detail-box emp-detail-red">
+                            <div class="emp-detail-heading">
+                                Emails
+                                <span class="tools pull-right">
+                                    <a class="fa fa-chevron-up" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="email-area">
+                                                <label class="em-detail-left">
+                                                   Business Process Re-Engineering With Its Three Tenets People Capability, Process Maturity And Technology Adoption Form The Core Of Our Ability To Provide Our Customers With An Enterprise-Class Customized Solution To Address Their Talent Acquisition Challenges. S.
+                                               </label> 
+                                               <span>
+                                                   <img src="../../../assets/admin.png" class="notes-user-img">&nbsp;&nbsp;<label class="email-user-label">Sharath Krishna</label>
+                                               </span>
+                                               <span>
+                                                   <img src="../../../assets/email-calendar.png" class="notes-user-img">&nbsp;&nbsp;<label class="email-user-label">05-Jan-2016</label>
+                                               </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="email-area">
+                                                <label class="em-detail-left">
+                                                   Business Process Re-Engineering With Its Three Tenets People Capability, Process Maturity And Technology Adoption Form The Core Of Our Ability To Provide Our Customers With An Enterprise-Class Customized Solution To Address Their Talent Acquisition Challenges. S.
+                                               </label> 
+                                               <span>
+                                                   <img src="../../../assets/admin.png" class="notes-user-img">&nbsp;&nbsp;<label class="email-user-label">Sharath Krishna</label>
+                                               </span>
+                                               <span>
+                                                   <img src="../../../assets/email-calendar.png" class="notes-user-img">&nbsp;&nbsp;<label class="email-user-label">15-Mar-2016</label>
+                                               </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="email-area">
+                                                <label class="em-detail-left">
+                                                   Business Process Re-Engineering With Its Three Tenets People Capability, Process Maturity And Technology Adoption Form The Core Of Our Ability To Provide Our Customers With An Enterprise-Class Customized Solution To Address Their Talent Acquisition Challenges. S.
+                                               </label> 
+                                               <span>
+                                                   <img src="../../../assets/admin.png" class="notes-user-img">&nbsp;&nbsp;<label class="email-user-label">Sharath Krishna</label>
+                                               </span>
+                                               <span>
+                                                   <img src="../../../assets/email-calendar.png" class="notes-user-img">&nbsp;&nbsp;<label class="email-user-label">10-May-2016</label>
+                                               </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pull-right">
+                                        <nav aria-label="Page navigation example">
+                                          <ul class="pagination justify-content-end">
+                                            <li class="page-item disabled">
+                                              <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">Next</a>
+                                            </li>
+                                          </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

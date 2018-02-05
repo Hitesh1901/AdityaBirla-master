@@ -1,0 +1,17 @@
+.card{
+    border: none;
+    height: 350px !important;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+}
+.posi{
+    position: relative;
+    top: 1px;
+    height: 25px;
+    background-color: #53b2ac !important;
+}
+
+.bs{
+    height: calc(2.25rem + 2px);
+}

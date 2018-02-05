@@ -1,0 +1,83 @@
+<!-- edit stage modal content -->
+<div class="modal-header-edit">
+    <h5
+        class="modal-title"
+        id="exampleModalLabel"
+    >
+        Edit Stage
+    </h5>
+</div>
+<div class="modal-body">
+    <form
+        [formGroup]="myForm"
+        novalidate
+        autocomplete="off"
+    >
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-md-4 schedule-colr">Stage Name</label>
+                <div class="col-md-6">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id
+                        placeholder="Stage Name"
+                        [(ngModel)]="stage.stagename"
+                        [formControl]="myForm.controls.stage_stagename"
+                        required
+                    >
+                    <small>
+                        <form-messages [control]="myForm.controls.stage_stagename"></form-messages>
+                    </small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-4 schedule-colr">Description</label>
+                <div class="col-md-6">
+                    <textarea
+                        type="text"
+                        class="form-control"
+                        id
+                        placeholder="Description"
+                        [(ngModel)]="stage.stagedescription"
+                        [formControl]="myForm.controls.stage_stagedescription"
+                        required
+                    ></textarea>
+                    <small>
+                        <form-messages [control]="myForm.controls.stage_stagedescription"></form-messages>
+                    </small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer clearfix">
+            <button
+                type="button"
+                class="btn schedule-footer btn-info"
+                (click)="save()"
+                [disabled]="!myForm.valid"
+                [ngClass]="{disabled : !myForm.valid}"
+            >
+                <i
+                    class="fa fa-floppy-o"
+                    aria-hidden="true"
+                ></i>
+                Save
+            </button>
+            <button
+                type="button"
+                class="btn schedule-footer btn-danger"
+                data-dismiss="modal"
+                (click)="onClose()"
+            >
+                <i
+                    class="fa fa-times"
+                    aria-hidden="true"
+                ></i>
+                Close
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,134 @@
+<section class="wrapper">
+    <section class="wrapper-emp-detail">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                    <div class="emp-detail-box emp-detail-red">
+                        <div class="emp-detail-heading">
+                            Course
+                            <span
+                                class="tools pull-right"
+                                (click)="isCollapsed = !isCollapsed"
+                            >
+                                <a
+                                    class="fa fa-chevron-up"
+                                    href="javascript:;"
+                                ></a>
+                            </span>
+                            <span class="pull-right">
+                                <a
+                                    (click)="openModal(template)"
+                                    class="button grey"
+                                    data-toggle="modal"
+                                    data-target="#education_new"
+                                >
+                                    <i
+                                        class="fa fa-plus"
+                                        aria-hidden="true"
+                                        data-toggle="tooltip"
+                                        data-placement="bottom"
+                                        title="Add New Education"
+                                    ></i>
+                                    Add New
+                                </a>
+                            </span>
+
+                        </div>
+                        <div
+                            (collapsed)="collapsed($event)"
+                            (expanded)="expanded($event)"
+                            [collapse]="isCollapsed"
+                        >
+                            <div class="emp-detail-body">
+                                    <span class="pull-left" >
+                                            <div class="btn-group">
+                                                    <input id="searchinput" style="margin-bottom:10px !important" type="search" class="form-control" placeholder="search" [(ngModel)]="iFilter">
+                                                    <span  *ngIf='iFilter!=""' id="searchclear" class="glyphicon glyphicon-remove-circle" (click)="clearSearch()"></span>
+                                                    </div>
+                                        </span>     
+                                <div>
+                                    <data-table
+                                        id="persons-grid"
+                                        [items]="items | filter : ['name' ,'fullname']: iFilter"
+                                        [itemCount]="itemCount"
+                                        (reload)="reloadItems($event)"
+                                        (rowClick)="rowClick($event)"
+                                        (rowDoubleClick)="rowDoubleClick($event)"
+                                        [rowTooltip]="rowTooltip"
+                                    >
+                                        <data-table-column
+                                            style="padding:10px !important"
+                                            [property]="'name'"
+                                            [header]="'Course Name'"
+                                            [sortable]="true"
+                                            [resizable]="true"
+                                        >
+                                        </data-table-column>
+                                        <data-table-column
+                                            [property]="'fullname'"
+                                            [header]="'Full Name'"
+                                            [sortable]="true"
+                                            [resizable]="true"
+                                        >
+                                        </data-table-column>
+                                        <data-table-column
+                                            [property]="'fullname'"
+                                            [header]="'Actions'"
+                                            [resizable]="true"
+                                        >
+                                            <ng-template
+                                                #dataTableCell
+                                                let-item="item"
+                                            >
+                                                <span>
+                                                    <button
+                                                        (click)="openModal1(template1,item)"
+                                                        class="btn btn-round-action feedback-green"
+                                                        data-toggle="modal"
+                                                        data-target="#edit_city"
+                                                    >
+                                                        <i
+                                                            class="fa fa-pencil"
+                                                            aria-hidden="true"
+                                                            data-toggle="tooltip"
+                                                            data-placement="bottom"
+                                                            title="Edit City"
+                                                        ></i>
+                                                    </button>
+                                                    <button
+                                                        class="btn btn-round-action feedback-red"
+                                                        data-toggle="modal"
+                                                        data-target="#delete_city"
+                                                    >
+                                                        <i
+                                                            class="fa fa-trash-o"
+                                                            aria-hidden="true"
+                                                            data-toggle="tooltip"
+                                                            data-placement="bottom"
+                                                            title="Delete City"
+                                                        ></i>
+                                                    </button>
+                                                </span>
+                                            </ng-template>
+                                        </data-table-column>
+                                    </data-table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- Add Course template -->
+<ng-template #template>
+    <app-add-course (close)="onClose()"></app-add-course>
+</ng-template>
+<!-- Edit Course template -->
+<ng-template #template1>
+    <app-edit-course
+        [course]="course"
+        (close)="onClose()"
+    ></app-edit-course>
+</ng-template>

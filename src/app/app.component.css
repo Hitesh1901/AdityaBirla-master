@@ -1,0 +1,33 @@
+alert{
+    position: fixed;
+    left: 50%;
+    top:66%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align:center;
+}
+router-outlet{
+    display: none;
+}
+.route-container {
+    position:relative;
+}
+.route-container>* {
+    display:block;
+}
+.active {
+    color:black !important;
+    background-color:#e1722d;
+    /* box-shadow: 0 4px 8px 0 #fff; */
+    margin-bottom:6px;
+    border: 1px solid #faf1f2;
+  }
+ .active:hover {
+    box-shadow: 0 4px 8px 0 #ccc;
+    margin-bottom:6px;
+}
+.a:hover {
+    box-shadow: 0 4px 8px 0 #fff;
+    margin-bottom:6px;
+    border: 1px solid #faf1f2;
+}

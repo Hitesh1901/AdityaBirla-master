@@ -1,0 +1,126 @@
+<div class="fixed-action-btn" style="bottom: 100px; right: 24px;"  >
+        <a class="btn-floating btn-lg peach-gradient btn-p-l" routerLink="/master">
+            <i class="fa fa-reply"></i>
+        </a>
+    </div> 
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;" (click)="openModal(template)">
+        <a class="btn-floating btn-lg purple-gradient" data-toggle="modal" data-target="#Employers_new">
+            <i class="fa fa-plus"></i>
+        </a>
+    </div>
+<section class="wrapper">
+    <section class="wrapper-emp-detail">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="clearfix m-b-20 m-t--10 emp-detail-padding">
+                    <div class="emp-detail-box emp-detail-red">
+                        <div class="emp-detail-heading">
+                            Target Audience
+                            <span
+                                class="tools pull-right"
+                                (click)="isCollapsed = !isCollapsed"
+                            >
+                                <a
+                                    class="fa fa-chevron-up"
+                                    href="javascript:;"
+                                ></a>
+                            </span>
+                        </div>
+                        <div
+                            (collapsed)="collapsed($event)"
+                            (expanded)="expanded($event)"
+                            [collapse]="isCollapsed"
+                        >
+                            <div class="emp-detail-body">
+                                    <span class="pull-left" >
+                                            <div class="btn-group">
+                                                    <input id="searchinput" style="margin-bottom:10px !important" type="search" class="form-control" placeholder="search" [(ngModel)]="iFilter">
+                                                    <span  *ngIf='iFilter!=""' id="searchclear" class="glyphicon glyphicon-remove-circle" (click)="clearSearch()"></span>
+                                                    </div>
+                                        </span>     
+                                <div>
+                                    <data-table
+                                        id="persons-grid"
+                                        [items]="items | filter : ['targetaudiencename','targetaudiencedescription']: iFilter"
+                                        [itemCount]="itemCount"
+                                        (reload)="reloadItems($event)"
+                                        (rowClick)="rowClick($event)"
+                                        (rowDoubleClick)="rowDoubleClick($event)"
+                                        [rowTooltip]="rowTooltip"
+                                    >
+
+                                        <data-table-column
+                                            [property]="'targetaudiencename'"
+                                            [header]="'Name'"
+                                            [sortable]="true"
+                                            [resizable]="true"
+                                        >
+                                        </data-table-column>
+                                        <data-table-column
+                                            [property]="'targetaudiencedescription'"
+                                            [header]="'Description'"
+                                            [sortable]="true"
+                                            [resizable]="true"
+                                        >
+                                        </data-table-column>
+                                        <data-table-column
+                                            [property]="'actions'"
+                                            [header]="'Actions'"
+                                            [resizable]="true"
+                                        >
+                                            <ng-template
+                                                #dataTableCell
+                                                let-item="item"
+                                            >
+                                                <span>
+                                                    <button
+                                                        (click)="openModal1(template1,item)"
+                                                        class="btn btn-round-action feedback-green"
+                                                        data-toggle="modal"
+                                                        data-target="#edit_city"
+                                                    >
+                                                        <i
+                                                            class="fa fa-pencil"
+                                                            aria-hidden="true"
+                                                            data-toggle="tooltip"
+                                                            data-placement="bottom"
+                                                            title="Edit City"
+                                                        ></i>
+                                                    </button>
+                                                    <button
+                                                        class="btn btn-round-action feedback-red"
+                                                        data-toggle="modal"
+                                                        data-target="#delete_city"
+                                                    >
+                                                        <i
+                                                            class="fa fa-trash-o"
+                                                            aria-hidden="true"
+                                                            data-toggle="tooltip"
+                                                            data-placement="bottom"
+                                                            title="Delete City"
+                                                        ></i>
+                                                    </button>
+                                                </span>
+                                            </ng-template>
+                                        </data-table-column>
+                                    </data-table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- add target audience template -->
+<ng-template #template>
+    <app-add-target-audience (close)="onClose()"></app-add-target-audience>
+</ng-template>
+<!-- edit target audience template -->
+<ng-template #template1>
+    <app-edit-target-audience
+        [targetAudience]="targetAudience"
+        (close)="onClose()"
+    ></app-edit-target-audience>
+</ng-template>

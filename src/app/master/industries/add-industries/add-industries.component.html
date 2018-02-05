@@ -1,0 +1,65 @@
+<!-- Add industries modal content -->
+<div class="modal-header-add">
+    <h5
+        class="modal-title"
+        id="exampleModalLabel"
+    >
+        Add Industries
+    </h5>
+</div>
+<div class="modal-body">
+    <form
+        [formGroup]="myForm"
+        novalidate
+        autocomplete="off"
+    >
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-md-4 schedule-colr">Category Name</label>
+                <div class="col-md-6">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id
+                        placeholder="Category Name"
+                        [(ngModel)]="industries.categoryname"
+                        [formControl]="myForm.controls.categoryname_name"
+                        required
+                    >
+                    <small>
+                        <form-messages [control]="myForm.controls.categoryname_name"></form-messages>
+                    </small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer clearfix">
+            <button
+                type="button"
+                class="btn schedule-footer btn-info"
+                (click)="save()"
+                [disabled]="!myForm.valid"
+                [ngClass]="{disabled : !myForm.valid}"
+            >
+                <i
+                    class="fa fa-floppy-o"
+                    aria-hidden="true"
+                ></i>
+                Save
+            </button>
+            <button
+                type="button"
+                class="btn schedule-footer btn-danger"
+                data-dismiss="modal"
+                (click)="onClose()"
+            >
+                <i
+                    class="fa fa-times"
+                    aria-hidden="true"
+                ></i>
+                Close
+            </button>
+        </div>
+    </form>
+</div>

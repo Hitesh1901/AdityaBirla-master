@@ -1,0 +1,27 @@
+<section class="wrapper">
+    <div class="row padding">
+        <div class="col-lg-6 col-md-6 col-sm-6 card">
+            <app-bar-chart 
+            [barChartData]="barChartData" 
+            [barChartLabels]="barChartLabels"
+            ></app-bar-chart>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 card">
+            <app-stacked-bar-chart></app-stacked-bar-chart>
+        </div>
+    </div>
+    <div class="row padding">
+        <div class="col-lg-6 col-md-6 col-sm-6 card">
+            <app-mixed-chart></app-mixed-chart>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 card">
+            <app-line-chart></app-line-chart>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 card">
+            <app-radar-chart></app-radar-chart>
+        </div>
+    </div> 
+</section>
+

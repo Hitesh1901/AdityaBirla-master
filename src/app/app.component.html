@@ -1,0 +1,167 @@
+<div
+    *ngIf="showLoader"
+    style="height:100%"
+>
+    <!-- loader -->
+    <!-- style="position:fixed; width:100%; z-index:9999999; top:0px" -->
+    <!-- <progressbar
+        [value]="100"
+        [striped]="true"
+        type="danger"
+        [animate]="true"
+    >
+    </progressbar> -->
+
+    <!-- <ngx-loading [show]="showLoader" color="#FF0000" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading> -->
+
+</div>
+<section id="container">
+    <header class="header fixed-top clearfix">
+        <!-- logo start -->
+        <div class="brand">
+
+            <a
+                routerLink="home"
+                class="logo"
+            >
+                <img
+                    src="../assets/logo.png"
+                    alt="logo"
+                >
+            </a>
+        </div>
+        <div class="brand-acc">
+
+            <a
+                href="#"
+                class="logo-acc"
+            >
+                <img
+                    src="../assets/accelerate-Logo.png"
+                    alt
+                >
+            </a>
+        </div>
+        <!-- logo end -->
+    </header>
+    <!-- [collapse]="isCollapsedImage" -->
+    <aside>
+        <div
+            id="sidebar"
+            class="nav-collapse"
+        >
+            <!-- sidebar menu start -->
+            <div class="leftside-navigation">
+                <div class="top-nav clearfix"></div>
+                <ul
+                    class="sidebar-menu"
+                    id="nav-accordion"
+                >
+                    <!-- <li class="dropdown">
+                        <a
+                            data-toggle="dropdown"
+                            class="dropdown-toggle"
+                            href="#"
+                        >
+                            <img
+                                alt
+                                src="../assets/profile-new.png"
+                            >
+                            <span class="username p-l-17">Profile</span>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-suitcase"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-cog"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-key"></i>
+                                    Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li> -->
+                   
+                    <li>
+                        <a
+                            routerLink="home"
+                            routerLinkActive="active"
+                            class="a"
+                        >
+                            <img src="../assets/home.png">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            routerLink="dashboard"
+                            routerLinkActive="active"
+                            class="a"
+                        >
+                            <img src="../assets/dashboard.png">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">
+                            <img src="../assets/reports.png">
+                            <span>Reports</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a
+                            routerLink="master"
+                            routerLinkActive="active"
+                            class="a"
+                        >
+                            <img src="../assets/task.png">
+                            <span>Master</span>
+                        </a>
+                    </li>
+                    <li>
+                            <a
+                                routerLink="insight"
+                                routerLinkActive="active"
+                                class="a"
+                            >
+                                <img src="../assets/insight.png">
+                                <span>Insight</span>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+            <!-- sidebar menu end -->
+        </div>
+    </aside>
+    <!-- main content -->
+    <section
+        id="main-content"
+        [@routerTransition]="getState(outlet)"
+    >
+   
+
+
+        <router-outlet #outlet="outlet"></router-outlet>
+        <!-- footer -->
+        <footer>
+            <div class="footer">
+                <p>© Aditya birla capital</p>
+            </div>
+        </footer>
+
+    </section>
+    <!-- alert message -->
+    <div class="al">
+        <alert></alert>
+    </div>
+
+</section>

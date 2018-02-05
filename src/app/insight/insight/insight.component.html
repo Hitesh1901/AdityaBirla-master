@@ -1,0 +1,269 @@
+<section class="wrapper">
+        
+    </section>
+    <section class="wrapper-sec">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row-fluid">
+                    <div class="col-sm-12">
+                        <div class="emp-detail-box-rm emp-detail-red">
+                            <div class="emp-detail-heading">
+                                advance filter
+                                <span class="tools pull-right" (click)="isCollapsed = !isCollapsed">
+                                    <a class="fa fa-chevron-down" href="javascript:;"></a>
+                                </span>  
+                            </div>
+                            <div class="emp-detail-body" style="display: none;" (collapsed)="collapsed($event)"
+                            (expanded)="expanded($event)"
+                            [collapse]="isCollapsed">
+                                <div class="col-sm-12">
+                                    <div class="">
+                                        <ul class="text-center">
+                                            <li class="hr-li-drill">
+                                                <a href="#"><span class="hb-pink hb-sm-pink active">S1</span></a>
+                                            </li>
+                                            <li class="hr-li-drill">
+                                                <a href="#"><span class="hb-pink hb-sm-pink">S2</span></a>
+                                            </li>
+                                            <li class="hr-li-drill">
+                                                <a href="#"><span class="hb-pink hb-sm-pink">S3</span></a>
+                                            </li>
+                                            <li class="hr-li-drill">
+                                                <a href="#"><span class="hb-pink hb-sm-pink">S4</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row" style="margin: 0;">
+                                        <ul class="text-center">
+                                            <li class="info-box-li">
+                                                <a href="#">
+                                                    <div class="info-box bg-complete hover-expand-effect">
+                                                        <div class="icon-complete">
+                                                            <img src="../../assets/user-com.png" style="width: 50px;">
+                                                        </div>
+                                                        <div class="content-new">
+                                                            <div class="text">Completed</div>
+                                                            <div class="number count-to">01</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="info-box-li">
+                                                <a href="#">
+                                                    <div class="info-box bg-pending hover-expand-effect active">
+                                                        <div class="icon-pending">
+                                                            <img src="../../assets/drill-pending.png" style="width: 50px;">
+                                                        </div>
+                                                        <div class="content-new">
+                                                            <div class="text">Pending</div>
+                                                            <div class="number count-to">03</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="info-box-li">
+                                                <a href="#">
+                                                    <div class="info-box bg-no-res hover-expand-effect">
+                                                        <div class="icon-no-res">
+                                                            <img src="../../assets/drill-no-response.png" style="width: 50px;">
+                                                        </div>
+                                                        <div class="content-new">
+                                                            <div class="text">No Response</div>
+                                                            <div class="number count-to">05</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="info-box-li">
+                                                <a href="#">
+                                                    <div class="info-box bg-schedule hover-expand-effect">
+                                                        <div class="icon-schedule">
+                                                            <img src="../../assets/drill-sch.png" style="width: 50px;">
+                                                        </div>
+                                                        <div class="content-new">
+                                                            <div class="text">Scheduled</div>
+                                                            <div class="number count-to">02</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="form-horizontal m-t-10">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-5 schedule-colr">Team Member</label>
+                                            <div class="col-lg-6">
+                                                <select id="e1" class="populate" style="width: 270px">
+                                                    <option value="KA">Suryanarayanan Yegnesswaran</option>
+                                                    <option value="AP">Yadala Guru Sravan</option>
+                                                    <option value="GJ">Sanketh More</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper-sec">
+        <div class="row m-b-6">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <div class="clearfix m-b-20 m-t-10 emp-detail-padding">
+                    <div class="emp-detail-box-tm emp-detail-red">
+                        <div class="emp-detail-heading-tm tm-total">
+                            Total Calls
+                        </div>
+                        <div class="emp-detail-body-tm">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item ch-img-1">
+                                        <h3>150</h3>
+                                        <div class="ch-info">
+                                            <h3>Total Calls</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <div class="clearfix m-b-20 m-t-10 emp-detail-padding">
+                    <div class="emp-detail-box-tm emp-detail-red">
+                        <div class="emp-detail-heading-tm tm-attempt">
+                            Attempted Calls
+                        </div>
+                        <div class="emp-detail-body-tm">
+                            <ul class="ch-grid-1">
+                                <li>
+                                    <div class="ch-item-1 ch-img-2">          
+                                        <div class="ch-info-wrap">
+                                            <div class="ch-info-1">
+                                                <div class="ch-info-front ch-img-2">
+                                                     <h3>150</h3>  
+                                                </div>
+                                                <div class="ch-info-back">
+                                                    <h3>Attempted Calls</h3>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <div class="clearfix m-b-20 m-t-10 emp-detail-padding">
+                    <div class="emp-detail-box-tm emp-detail-red">
+                        <div class="emp-detail-heading-tm tm-com">
+                            Completed Calls
+                        </div>
+                        <div class="emp-detail-body-tm">
+                            <ul class="ch-grid-2">
+                                <li>
+                                    <div class="ch-item-2 ch-img-3">         
+                                        <div class="ch-info-wrap-2">
+                                            <div class="ch-info-2">
+                                                <div class="ch-info-front-2 ch-img-3">
+                                                     <h3>150</h3>  
+                                                </div>
+                                                <div class="ch-info-back-2">
+                                                    <h3>Completed Calls</h3>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <div class="clearfix m-b-20 m-t-10 emp-detail-padding">
+                    <div class="emp-detail-box-tm emp-detail-red">
+                        <div class="emp-detail-heading-tm tm-pen">
+                            Pending Calls
+                        </div>
+                        <div class="emp-detail-body-pen">
+                            <ul class="ch-grid-2">
+                                <li>
+                                    <div class="ih-item circle1 effect3 right_to_left">
+                                        <a href="#">
+                                            <div class="img">
+                                                <h3 class="new-img">150</h3>
+                                            </div>
+                                            <div class="info">
+                                                <h3>Pending Calls</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <div class="clearfix m-b-20 m-t-10 emp-detail-padding">
+                    <div class="emp-detail-box-tm emp-detail-red">
+                        <div class="emp-detail-heading-tm tm-pen">
+                            No Response Calls
+                        </div>
+                        <div class="emp-detail-body-pen">
+                            <ul class="ch-grid-2">
+                                <li>
+                                    <div class="ih-item circle2 effect8 left_to_right">
+                                        <a href="#">
+                                            <div class="img-container">
+                                                <div class="img">
+                                                    <h3 class="new-img">150</h3>
+                                                </div>
+                                            </div>
+                                            <div class="info-container">
+                                                <div class="info">
+                                                    <h3>No Response Calls</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <div class="clearfix m-b-20 m-t-10 emp-detail-padding">
+                    <div class="emp-detail-box-tm emp-detail-red">
+                        <div class="emp-detail-heading-tm tm-sch">
+                            Schedule Calls
+                        </div>
+                        <div class="emp-detail-body-pen">
+                            <ul class="ch-grid-2">
+                                <li>
+                                    <div class="ih-item circle3 effect6 scale_up">
+                                        <a href="#">
+                                            <div class="img">
+                                                <h3 class="new-img">150</h3>
+                                            </div>
+                                            <div class="info">
+                                                <h3>Schedule Calls</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
